@@ -60,7 +60,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Edit Task</h5>
+            <h5 class="modal-title text-dark">Edit Task</h5>
             <button type="button" class="btn-close" @click="closeModal"></button>
           </div>
           <div class="modal-body" style="color: black;">
@@ -89,25 +89,25 @@
     <!-- Delete Confirmation Modal -->
     <div v-if="showDeleteModal" class="modal fade show" style="display: block;">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content bg-light rounded-sm">
           <div class="modal-header">
-            <h5 class="modal-title">Delete Task</h5>
+            <h5 class="modal-title text-dark">Delete Task</h5>
             <button type="button" class="btn-close" @click="closeModal"></button>
           </div>
           <div class="modal-body" style="color: black;">
             Are you sure you want to delete this task?
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer ">
             <button
               type="button"
-              class="btn btn-success"
+              class="btn btn-success bg-success"
               @click="closeModal"
             >
               Cancel
             </button>
             <button
               type="button"
-              class="btn btn-danger"
+              class="btn btn-danger bg-danger"
               @click="confirmDeleteAction"
             >
               OK
@@ -197,19 +197,5 @@ export default {
   text-overflow: ellipsis;
 }
 
-/* Modal styles */
-.modal-content {
-  background-color: white;
-  border-radius: 10px;
-}
 
-.modal-footer .btn-success {
-  background-color: green;
-  border-color: green;
-}
-
-.modal-footer .btn-danger {
-  background-color: red;
-  border-color: red;
-}
 </style>
